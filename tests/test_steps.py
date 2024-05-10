@@ -1,6 +1,6 @@
+import allure
 from selene import browser, by, be
 from selene.support.shared.jquery_style import s
-import allure
 from allure_commons.types import Severity
 from utils.function_steps import open_main_page, open_issue_tab, search_for_repository, go_to_repository, \
     should_see_issue_with_number
