@@ -16,7 +16,7 @@ def search_for_repository(repo):
 
 @allure.step("Переходим по ссылке репозитория {repo}")
 def go_to_repository(repo):
-    browser.element(by.link_text(repo)).click()
+    s(by.link_text(repo)).click()
 
 @allure.step("Открываем таб Issues")
 def open_issue_tab():
