@@ -1,5 +1,4 @@
-from selene.support import by
-from selene import browser
+from selene import by, browser
 from selene.support.shared.jquery_style import s
 import allure
 
@@ -11,9 +10,9 @@ def open_main_page():
 
 @allure.step("Ищем репозитория {repo}")
 def search_for_repository(repo):
-    browser.element(".header-search-button").click()
-    browser.element("#query-builder-test").send_keys(repo)
-    browser.element("#query-builder-test").submit()
+    s(".header-search-button").click()
+    s("#query-builder-test").send_keys(repo)
+    s("#query-builder-test").submit()
 
 @allure.step("Переходим по ссылке репозитория {repo}")
 def go_to_repository(repo):
